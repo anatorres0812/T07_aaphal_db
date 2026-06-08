@@ -52,13 +52,13 @@ CREATE TABLE CLAIM_BOOK (
 );
 
 # RELACIONES:
--- CONTACT_SUBJECT (1) → (N) CONTACT
--- TIPO_DOCUMENTO (1) → (N) CLAIM_BOOK
--- UBIGEO (1) → (N) CLAIM_BOOK
+- CONTACT_SUBJECT (1) → (N) CONTACT
+- TIPO_DOCUMENTO (1) → (N) CLAIM_BOOK
+- UBIGEO (1) → (N) CLAIM_BOOK
 
 # CONSIDERACIONES:
--- AUTO_INCREMENT en claves primarias
--- FOREIGN KEY para integridad referencial
--- NOT NULL en campos obligatorios
--- DEFAULT CURRENT_TIMESTAMP en fechas
--- Base de datos implementada en MySQL
+- AUTO_INCREMENT en claves primarias
+- FOREIGN KEY para integridad referencial
+- NOT NULL en campos obligatorios
+- DEFAULT CURRENT_TIMESTAMP en fechas
+- Base de datos implementada en MySQL
