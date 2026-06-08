@@ -6,11 +6,11 @@ El diseño físico representa la implementación de la base de datos en el siste
 
 - USE aaphal_db;
 
-- CREATE TABLE UBIGEO (
--     ubigeo_id INT AUTO_INCREMENT PRIMARY KEY,
-    department VARCHAR(100) NOT NULL,
-    province VARCHAR(100) NOT NULL,
-    district VARCHAR(100) NOT NULL
+CREATE TABLE UBIGEO (
+  ubigeo_id INT AUTO_INCREMENT PRIMARY KEY,
+  department VARCHAR(100) NOT NULL,
+  province VARCHAR(100) NOT NULL,
+  district VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE TIPO_DOCUMENTO (
