@@ -6,8 +6,6 @@ Con el objetivo de mejorar la comunicación con la comunidad, clientes potencial
 
 El sitio web tendrá carácter informativo, por lo que no incluirá procesos de venta en línea, pagos electrónicos ni gestión de pedidos.
 
----
-
 ## OBJETIVO DEL SISTEMA
 
 Desarrollar una base de datos que soporte un sistema web informativo para la Asociación de Agricultores de Palto en Huamanpali - Alto Larán, permitiendo:
@@ -17,8 +15,6 @@ Desarrollar una base de datos que soporte un sistema web informativo para la Aso
 - Registrar reclamos a través del libro de reclamaciones.
 - Estandarizar información mediante tablas maestras (UBIGEO, tipo de documento y asunto de contacto).
 - Garantizar integridad y organización de la información.
-
----
 
 ## ALCANCE DEL SISTEMA
 
@@ -38,8 +34,6 @@ No incluye:
 - Pagos electrónicos.
 - Gestión de inventarios o pedidos.
 
----
-
 ## REQUERIMIENTOS FUNCIONALES
 
 - RF01: Registrar contactos de usuarios mediante un formulario web.
@@ -50,8 +44,6 @@ No incluye:
 - RF06: Gestionar asuntos de contacto.
 - RF07: Permitir almacenamiento y consulta de información registrada.
 
----
-
 ## REQUERIMIENTOS NO FUNCIONALES
 
 - RNF01: La base de datos debe estar implementada en MySQL.
@@ -60,14 +52,10 @@ No incluye:
 - RNF04: El sistema debe permitir consultas rápidas y eficientes.
 - RNF05: Debe asegurar consistencia en la información almacenada.
 
----
-
 ## USUARIOS DEL SISTEMA
 
 - Usuario visitante: Envía consultas o reclamos mediante el sistema web.
 - Administrador: Gestiona y consulta la información almacenada en la base de datos.
-
----
 
 ## ENTIDADES PRINCIPALES
 
