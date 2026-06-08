@@ -7,8 +7,8 @@ CREATE DATABASE IF NOT EXISTS aaphal_db;
 USE aaphal_db;
 
 CREATE TABLE UBIGEO (
-ubigeo_id INT AUTO_INCREMENT PRIMARY KEY,
-department VARCHAR(100) NOT NULL,
+    ubigeo_id INT AUTO_INCREMENT PRIMARY KEY,
+    department VARCHAR(100) NOT NULL,
     province VARCHAR(100) NOT NULL,
     district VARCHAR(100) NOT NULL
 );
