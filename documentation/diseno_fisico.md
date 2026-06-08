@@ -51,14 +51,14 @@ CREATE TABLE CLAIM_BOOK (
     FOREIGN KEY (ubigeo_id) REFERENCES UBIGEO(ubigeo_id)
 );
 
--- RELACIONES
+# RELACIONES:
 -- CONTACT_SUBJECT (1) → (N) CONTACT
 -- TIPO_DOCUMENTO (1) → (N) CLAIM_BOOK
 -- UBIGEO (1) → (N) CLAIM_BOOK
 
--- CONSIDERACIONES
+# CONSIDERACIONES:
 -- AUTO_INCREMENT en claves primarias
--- Claves foráneas para integridad referencial
+-- FOREIGN KEY para integridad referencial
 -- NOT NULL en campos obligatorios
 -- DEFAULT CURRENT_TIMESTAMP en fechas
--- Implementación en MySQL
+-- Base de datos implementada en MySQL
