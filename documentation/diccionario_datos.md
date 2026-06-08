@@ -2,7 +2,6 @@
 
 El diccionario de datos describe detalladamente cada tabla de la base de datos, sus atributos, tipos de datos, restricciones y descripción funcional dentro del sistema de la Asociación de Agricultores de Palto en Huamanpali - Alto Larán.
 
----
 
 ## TABLA: UBIGEO
 
