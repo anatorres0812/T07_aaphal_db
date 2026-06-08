@@ -3,55 +3,55 @@ CREATE DATABASE IF NOT EXISTS aaphal_db;
 USE aaphal_db;
 
 CREATE TABLE UBIGEO (
-    ubigeo_id INT AUTO_INCREMENT PRIMARY KEY,
-    department VARCHAR(100) NOT NULL,
-    province VARCHAR(100) NOT NULL,
-    district VARCHAR(100) NOT NULL
+    id_ubigeo INT AUTO_INCREMENT PRIMARY KEY,
+    departamento VARCHAR(100) NOT NULL,
+    provincia VARCHAR(100) NOT NULL,
+    distrito VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE DOCUMENT_TYPE (
-    document_type_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50) NOT NULL
+CREATE TABLE TIPO_DOCUMENTO (
+    id_tipo_documento INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE CONTACT_SUBJECT (
-    subject_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL
+CREATE TABLE ASUNTO_CONTACTO (
+    id_asunto INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE CONTACT (
-    contact_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    email VARCHAR(150) NOT NULL,
-    phone VARCHAR(20),
-    subject_id INT NOT NULL,
-    message TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+CREATE TABLE CONTACTO (
+    id_contacto INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL,
+    telefono VARCHAR(20),
+    id_asunto INT NOT NULL,
+    mensaje TEXT NOT NULL,
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT fk_contact_subject
-    FOREIGN KEY (subject_id)
-    REFERENCES CONTACT_SUBJECT(subject_id)
+    CONSTRAINT fk_contacto_asunto
+    FOREIGN KEY (id_asunto)
+    REFERENCES ASUNTO_CONTACTO(id_asunto)
 );
 
-CREATE TABLE CLAIM_BOOK (
-    claim_id INT AUTO_INCREMENT PRIMARY KEY,
-    first_name VARCHAR(100) NOT NULL,
-    last_name VARCHAR(100) NOT NULL,
-    document_type_id INT NOT NULL,
-    document_number VARCHAR(20) NOT NULL,
-    email VARCHAR(150) NOT NULL,
-    phone VARCHAR(20),
-    address VARCHAR(200) NOT NULL,
-    ubigeo_id INT NOT NULL,
-    claim_detail TEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+CREATE TABLE LIBRO_RECLAMACIONES (
+    id_reclamo INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    id_tipo_documento INT NOT NULL,
+    numero_documento VARCHAR(20) NOT NULL,
+    correo VARCHAR(150) NOT NULL,
+    telefono VARCHAR(20),
+    direccion VARCHAR(200) NOT NULL,
+    id_ubigeo INT NOT NULL,
+    detalle_reclamo TEXT NOT NULL,
+    fecha_registro DATETIME DEFAULT CURRENT_TIMESTAMP,
 
-    CONSTRAINT fk_claim_document_type
-    FOREIGN KEY (document_type_id)
-    REFERENCES DOCUMENT_TYPE(document_type_id),
+    CONSTRAINT fk_reclamo_tipo_documento
+    FOREIGN KEY (id_tipo_documento)
+    REFERENCES TIPO_DOCUMENTO(id_tipo_documento),
 
-    CONSTRAINT fk_claim_ubigeo
-    FOREIGN KEY (ubigeo_id)
-    REFERENCES UBIGEO(ubigeo_id)
+    CONSTRAINT fk_reclamo_ubigeo
+    FOREIGN KEY (id_ubigeo)
+    REFERENCES UBIGEO(id_ubigeo)
 );
