@@ -1,4 +1,4 @@
-Modelo de Negocio
+# Modelo de Negocio
 
 La Asociación de Agricultores de Palto en Huamanpali - Alto Larán es una organización dedicada a promover el desarrollo agrícola de sus asociados, fomentando la producción y comercialización de palta de calidad, como parte de su proceso de modernización y difusión de información, se plantea el desarrollo de un sitio web informativo que permita fortalecer la comunicación con agricultores, clientes potenciales, instituciones y público en general.
 
